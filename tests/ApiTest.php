@@ -71,4 +71,19 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $api = new Api('token');
         $this->assertInstanceOf('\Holded\Api', $api);
     }
+
+    public function testCallFunctionToGetIncorrectModel()
+    {
+        $this->setExpectedException('Holded\Exceptions\HoldedException');
+        $api = new Api('token');
+        $api->something();
+    }
+
+    public function testCallFunctionToGetCorrectModel()
+    {
+        $api = new Api('token');
+        $contacts = $api->contacts();
+
+        $this->assertInstanceOf('\Holded\Contacts', $contacts);
+    }
 }

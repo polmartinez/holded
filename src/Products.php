@@ -1,19 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: enricu
- * Date: 22/11/2017
- * Time: 21:12
- */
 
 namespace Holded;
 
+use Holded\Abstracts\BaseApi;
 
-class Products extends Api
+class Products extends BaseApi
 {
-    public function __construct()
+    protected $methods = ['get', 'find', 'add', 'update', 'delete'];
+
+    protected $pluralizeMethods = ['get'];
+
+    protected $endpoint = 'product';
+
+    public function __construct(Caller $call)
     {
-        $this->setEndpoint('product');
-        parent::__construct();
+        $this->call = $call;
     }
 }

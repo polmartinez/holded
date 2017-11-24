@@ -1,21 +1,14 @@
 <?php
 
 namespace Holded;
+
 use Holded\Abstracts\BaseApi;
 
-/**
- * Class Contacts
- * @package Holded
- *
- */
-class Contacts extends BaseApi
+class SalesOrder extends BaseApi
 {
-
     protected $methods = ['get', 'find', 'add', 'update', 'delete'];
 
-    protected $pluralizeMethods = ['get'];
-
-    protected $endpoint = 'contact';
+    protected $endpoint = 'doc/salesorder';
 
     public function __construct(Caller $call)
     {

@@ -1,21 +1,14 @@
 <?php
 
 namespace Holded;
+
 use Holded\Abstracts\BaseApi;
 
-/**
- * Class Contacts
- * @package Holded
- *
- */
-class Contacts extends BaseApi
+class CreditNote extends BaseApi
 {
-
     protected $methods = ['get', 'find', 'add', 'update', 'delete'];
 
-    protected $pluralizeMethods = ['get'];
-
-    protected $endpoint = 'contact';
+    protected $endpoint = 'doc/creditnote';
 
     public function __construct(Caller $call)
     {

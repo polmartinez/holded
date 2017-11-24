@@ -4,11 +4,11 @@ namespace Holded;
 
 use Holded\Abstracts\BaseApi;
 
-class SalesChannel extends BaseApi
+class Entry extends BaseApi
 {
-    protected $methods = ['get', 'add', 'update', 'delete'];
+    protected $methods = ['add', 'get', 'delete'];
 
-    protected $endpoint = 'saleschannels';
+    protected $endpoint = 'entry';
 
     public function __construct(Caller $call)
     {
