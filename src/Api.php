@@ -30,10 +30,10 @@ class Api
                 $msg .= 'Use Holded::setToken, or instantiate the Holded class with a $token parameter.';
                 throw new HoldedException($msg);
             }
-        } else {
-            self::validateToken($token);
-            $this->instanceToken = $token;
+            $token = self::$token;
         }
+        self::validateToken($token);
+        $this->instanceToken = $token;
     }
 
     /**
