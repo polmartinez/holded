@@ -60,7 +60,7 @@ class Caller
         }
 
         $response = $this->client
-            ->post($this->getUrl($id), ['body' => $params])
+            ->post($this->getUrl($id), ['form_params' => $params])
             ->getBody();
         return json_decode($response, true);
     }
