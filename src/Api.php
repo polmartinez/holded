@@ -19,7 +19,7 @@ class Api
     private $instanceToken;
 
     /**
-     * @param string|null $token The API access token, as obtained on diffbot.com/dev
+     * @param string|null $token The API access token, as obtained on holded.com
      * @throws HoldedException When no token is provided
      */
     public function __construct($token = null)
@@ -27,7 +27,7 @@ class Api
         if ($token === null) {
             if (self::$token === null) {
                 $msg = 'No token provided, and none is globally set. ';
-                $msg .= 'Use Diffbot::setToken, or instantiate the Diffbot class with a $token parameter.';
+                $msg .= 'Use Holded::setToken, or instantiate the Holded class with a $token parameter.';
                 throw new HoldedException($msg);
             }
         } else {
@@ -38,7 +38,7 @@ class Api
 
     /**
      * Sets the token for all future new instances
-     * @param $token string The API access token, as obtained on diffbot.com/dev
+     * @param $token string The API access token, as obtained on holded.com
      * @return void
      */
     public static function setToken($token)
