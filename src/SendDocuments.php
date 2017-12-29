@@ -13,6 +13,6 @@ class SendDocuments extends BaseApi
 
     public function send($doctype, $docid, $fields)
     {
-        return $this->execute(__METHOD__, $fields, "$doctype/$docid");
+        return $this->execute(__METHOD__, [$fields, $docid], $doctype);
     }
 }
