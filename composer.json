@@ -1,6 +1,6 @@
 {
     "name": "ebisbe/holded",
-    "description": "Api package to user Holded Api",
+    "description": "Api package to use Holded Api",
     "type": "library",
     "license": "MIT",
     "authors": [
