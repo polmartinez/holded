@@ -68,7 +68,7 @@ class Api
     {
         $namespace = '\Holded\\' . $name;
         if (!class_exists($namespace)) {
-            throw new HoldedException();
+            throw new HoldedException("Class with '$namespace' does not exists.");
         }
         return new $namespace(new Caller($this->instanceToken));
     }
